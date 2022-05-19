@@ -1,13 +1,12 @@
 import React from "react";
 import CardItem from "./CardItem";
 import "./Cards.css";
-import FaceEx from "../../img/facial_expression.png";
-import HeadMov from "../../img/head_movement.png";
-import EyeMov from "../../img/eye_movement.png";
-import GendCust from "../../img/gender_customization.png";
-import FaceAge from "../../img/face_aging.png";
-import AnimeStyle from "../../img/anime_style.png";
-import ProdAudio from "../../img/producing_audio.png";
+import FaceEx from "../../img/facial_expression.jpg";
+import EyeMov from "../../img/eye_movement.jpg";
+import GendCust from "../../img/gender_customization.jpg";
+import FaceAge from "../../img/face_aging.jpg";
+import AnimeStyle from "../../img/anime_style.jpg";
+import ProdAudio from "../../img/producing_audio.jpg";
 
 function Cards() {
   return (
@@ -51,4 +50,15 @@ function Cards() {
             />
             <CardItem
               src={ProdAudio}
-              te
+              text="Produce Audio"
+              label="PS"
+              path="/animator"
+            />
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Cards;

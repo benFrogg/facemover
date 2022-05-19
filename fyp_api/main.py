@@ -58,7 +58,7 @@ async def get_image(file: UploadFile = File(...)):
 @app.post("/get-feature")
 async def get_feature(feature_id: _schemas.FeatureBase):
     os.chdir("Mover")
-    subprocess.call(['python', 'Switch.py', '--mode', str(feature_id.feature_id)])
+    subprocess.call(['python', 'switch.py', '--mode', str(feature_id.feature_id)])
     os.chdir("..")
 
     return {"features_id": feature_id.feature_id}

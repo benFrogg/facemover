@@ -162,13 +162,9 @@ function ImageAndFeature() {
         setShowSpinner(false);
         setSelectedFile(null);
         setTimeout(function () {
-          if(window.location.hash != '#r') {
-              window.location.hash = 'r';
               window.location.reload();
-          }
         }, 35000);
     
-        setTimeout()
     });
 
     
@@ -251,8 +247,8 @@ function ImageAndFeature() {
                   <button
                     onClick={function (event) {
                       transformImage();
-                      sendFeatureID();
-                      getOutput();
+                      setTimeout(sendFeatureID, 10000);
+                      setTimeout(getOutput, 20000);
                     }}
                   >
                     Transform!
@@ -282,3 +278,6 @@ function ImageAndFeature() {
       </div>
     </div>
   );
+}
+
+export default ImageAndFeature;

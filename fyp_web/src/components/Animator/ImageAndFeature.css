@@ -67,4 +67,6 @@ video {
     }
 
     .outputGif {
-      
+        display: flex;
+    }
+}
