@@ -12,28 +12,26 @@ export const LoginContextProvider = (props) => {
         headers: {
           "Content-Type": "application/json",
           Authorization: "Bearer " + token,
-        }
-      }
+        },
+      };
 
       const response = await fetch("/users/me", requestOptions);
 
       if (!response.ok) {
         setToken(null);
       }
-      localStorage.setItem("theToken", token)
-    }
+      localStorage.setItem("theToken", token);
+    };
     fetchUser();
   }, [token]);
 
-
-
   return (
     <div>
-      <LoginContext.Provider value={{token, setToken}}>
+      <LoginContext.Provider value={{ token, setToken }}>
         {props.children}
       </LoginContext.Provider>
     </div>
   );
-}
+};
 
 export default LoginContext;

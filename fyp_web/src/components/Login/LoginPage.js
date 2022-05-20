@@ -5,7 +5,7 @@ import VpnKeyOutlinedIcon from "@mui/icons-material/VpnKeyOutlined";
 import LoginContext from "./LoginContext";
 
 function LoginPage() {
-  const {setToken} = useContext(LoginContext);
+  const { setToken } = useContext(LoginContext);
   const [email, setEmail] = useState("");
   const [password, setPW] = useState("");
   const [errorMessage, setError] = useState("");

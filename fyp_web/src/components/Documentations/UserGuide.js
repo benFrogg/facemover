@@ -8,11 +8,26 @@ function UserGuide() {
 
   return (
     <div className="UserGuide">
-      <Button onClick={() => setButtonPopup(true)} className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>USER MANUAL</Button>
+      <Button
+        onClick={() => setButtonPopup(true)}
+        className="btns"
+        buttonStyle="btn--primary"
+        buttonSize="btn--large"
+      >
+        USER MANUAL
+      </Button>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <h3>Link to User Manual</h3>
-        <br/>
-        <a href="https://drive.google.com/file/d/1IAp5NenrFGf325T-VexnxscEFE8RWPvV/view?usp=sharing" target="_blank" style={{ cursor: "pointer" }}><u>Bring me to see PDF</u></a>
+        <h3 style={{ fontSize: "45px", maxWidth: "500px" }}>
+          Link to User Manual
+        </h3>
+        <br />
+        <a
+          href="https://drive.google.com/file/d/1tCM_YPwdUXqLfIqGk66BXdvPvHrDFQ-w/view?usp=sharing"
+          target="_blank"
+          style={{ cursor: "pointer" }}
+        >
+          <u>Bring me to see PDF</u>
+        </a>
       </Popup>
     </div>
   );

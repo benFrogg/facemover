@@ -7,29 +7,27 @@ function Footer() {
   return (
     <div className="footer-container" id="footer">
       <section className="footer-subscription">
-        <h2 style={{color: "white"}}><u>About us</u></h2>
-        <p>We are a team of 5 UOW students determined to produce a face animation website with 7 features all using the application of GAN model.</p>
-        <br/>
-        <ul style={{color: "white"}}>
-          <li>
-            Yun Gayoung - Project Manager
-          </li>
-          <li>
-            Robert Ong - Lead Developer
-          </li>
-          <li>
-            Melvin Jong Sze Kuan - Machine Learning Developer
-          </li>
-          <li>
-            Wang Qian Lin - Machine Learning Developer
-          </li>
-          <li>
-            Benjamin Ang Qi Shao - Web Developer
-          </li>
+        <h2 style={{ color: "white" }}>
+          <u>About us</u>
+        </h2>
+        <p>
+          We are a team of 5 UOW students determined to produce a face animation
+          website with 7 features all using the application of GAN model.
+        </p>
+        <br />
+        <ul style={{ color: "white" }}>
+          <li>Yun Gayoung - Project Manager</li>
+          <li>Robert Ong - Lead Developer</li>
+          <li>Melvin Jong Sze Kuan - Machine Learning Developer</li>
+          <li>Wang Qian Lin - Machine Learning Developer</li>
+          <li>Benjamin Ang Qi Shao - Web Developer</li>
         </ul>
-        <br/><br/>
-        <div style={{color: "white"}}>
-          <h2><u>Contact Us</u></h2>
+        <br />
+        <br />
+        <div style={{ color: "white" }}>
+          <h2>
+            <u>Contact Us</u>
+          </h2>
           <p>Email: facemover.helpline@gmail.com</p>
         </div>
         <div className="input-areas">
@@ -48,7 +46,7 @@ function Footer() {
         <div className="social-media-wrap">
           <div className="footer-logo">
             <Link to="/" className="social-logo">
-              Face Mover &nbsp;About<i className="fas fa-code-branch fas-fade"></i>
+              Face Mover &nbsp;<i className="fas fa-code-branch fas-fade"></i>
             </Link>
           </div>
           <small className="website-rights">

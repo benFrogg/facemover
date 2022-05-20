@@ -121,15 +121,18 @@ function ImageAndFeature() {
   );
 
   useEffect(() => {
-    getOutput()
-  }, [])
+    getOutput();
+  }, []);
 
   async function getOutput() {
-    await axios.get("/output-image", {responseType: "blob"})
-    .then((response) => {
-      var imageUrl = (window.URL || window.webkitURL).createObjectURL(new Blob([response.data]));
-      setOutputImg(imageUrl);
-    })
+    await axios
+      .get("/output-image", { responseType: "blob" })
+      .then((response) => {
+        var imageUrl = (window.URL || window.webkitURL).createObjectURL(
+          new Blob([response.data])
+        );
+        setOutputImg(imageUrl);
+      });
   }
 
   const onInputChange = (e) => {
@@ -162,12 +165,9 @@ function ImageAndFeature() {
         setShowSpinner(false);
         setSelectedFile(null);
         setTimeout(function () {
-              window.location.reload();
+          window.location.reload();
         }, 35000);
-    
-    });
-
-    
+      });
   };
 
   const sendFeatureID = (e) => {
@@ -196,7 +196,9 @@ function ImageAndFeature() {
               >
                 <VStack spacing={7}>
                   <Heading>Upload your Image</Heading>
-                  <Text textAlign="center">/* accepted files (.png, .jpg) */</Text>
+                  <Text textAlign="center">
+                    /* accepted files (.png, .jpg) */
+                  </Text>
                   <HStack>
                     <input
                       style={{ marginLeft: "80px" }}
@@ -211,8 +213,7 @@ function ImageAndFeature() {
                     )}
                   </HStack>
                   <Heading>Preview</Heading>
-                  <SimpleGrid columns={3} spacing={8}>
-                  </SimpleGrid>
+                  <SimpleGrid columns={3} spacing={8}></SimpleGrid>
                 </VStack>
               </Center>
             </ChakraProvider>
@@ -267,11 +268,16 @@ function ImageAndFeature() {
                 justifyContent: "center",
                 alignItems: "center",
                 border: "solid white",
-                backdropFilter: "contrast(100%)"
+                backdropFilter: "contrast(100%)",
               }}
             >
-              <img src={outputImg}  className='outputGif' type="image/gif"/>
-              <video src="http://localhost:8000/output-image" type="video/mp4" controls autoPlay />
+              <img src={outputImg} className="outputGif" type="image/gif" />
+              <video
+                src="http://localhost:8000/output-image"
+                type="video/mp4"
+                controls
+                autoPlay
+              />
             </div>
           </li>
         </ul>
