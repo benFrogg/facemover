@@ -16,7 +16,6 @@ print('Generate happy Images')
 subprocess.call(['python', 'gan/CycleGan/test.py', 
                  '--dataroot', 'upload_img',
                  '--generator_B2A', 'logs/happy@07.04.2022-15_38_07/220/netG_B2A.pth',
-                 '--cuda',
                  '--order', '1',
 ])
 
@@ -25,7 +24,6 @@ print('Generate sad Images')
 subprocess.call(['python', 'gan/CycleGan/test.py', 
                  '--dataroot', 'upload_img',
                  '--generator_B2A', 'logs/sad@14.04.2022-23_56_10/160/netG_B2A.pth',
-                 '--cuda',
                  '--order', '2',
 ])
 

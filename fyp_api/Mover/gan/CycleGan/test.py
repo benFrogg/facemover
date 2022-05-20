@@ -40,7 +40,7 @@ if opt.cuda:
     netG_B2A.cuda()
 
 # Load state dicts
-netG_B2A.load_state_dict(torch.load(opt.generator_B2A))
+netG_B2A.load_state_dict(torch.load(opt.generator_B2A, map_location=torch.device('cpu')))
 
 # Set model's test mode
 netG_B2A.eval()
